@@ -8,7 +8,58 @@
     <link rel="stylesheet" href="scss/main.scss">
 </head>
 <body>
-    
+    <section class="login">
+        <div class="login_content">
+            <div class="login_title">
+                <h2 class="main_title">Авторизация</h2>
+            </div>
+            <form method="post" class="login_form">
+                <label class="login_item">
+                    <p class="body_regular">Логин:</p>
+                    <div class="login_input">
+                        <img class="login_mail-img" src="./imgs/icons/loginuser.svg" alt="">
+                        <input class="body_regular login_input-text" type="email" placeholder="Введите почту или логин">
+                    </div>
+                </label>
+                <label class="login_item">
+                    <p class="body_regular">Пароль:</p>
+                    <div class="login_input">
+                        <img class="login_mail-img" src="./imgs/icons/loginpassw.svg" alt="">
+                        <input class="body_regular login_input-text" id="password-input" type="password" placeholder="Введите пароль">
+                        <img class="login_mail-img-show" id="toggle-password" src="./imgs/icons/loginshowhide.svg" alt="">
+                    </div>
+                </label>
+                <label class="login_remember">
+                    <input type="checkbox" class="login_remember-checkbox-real" name="term">
+                    <span class="login_remember-checkbox-fake"></span>
+                    <p class="body_regular">Запомнить меня</p>
+                </label>
+                <div class="login_btn">
+                    <button class="login_btn-item body_regular">Войти</button>
+                </div>
+            </form>
+            <div class="login_forgot-pasw-content hide">
+                <div class="login_forgot-pasw-suptext">
+                    <p class="body_regular">Введите адрес вашей электронной почты. На нее придет письмо с ссылкой на форму сброса пароля.</p>
+                </div>
+                <form method="post">
+                    <label class="login_item">
+                        <p class="body_regular">Почта:</p>
+                        <div class="login_input">
+                            <img class="login_mail-img" src="./imgs/icons/emailicon.svg" alt="">
+                            <input class="body_regular login_input-text" id="password-input" type="email" placeholder="Введите почту или логин">
+                        </div>
+                        <div class="login_btn">
+                            <button type="submit" class="login_btn-item body_regular">Продолжить</button>
+                        </div>
+                    </label>
+                </form>
+            </div>
+            <div class="login_forgot-password">
+                <a class="login_forgot-password-item body_medium" href="#!" id="forgot_passw">Забыли пароль?</a>
+            </div>
+        </div>
+    </section>
     <script src="js/main.js"></script>
 </body>
 </html>

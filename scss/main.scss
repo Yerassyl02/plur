@@ -1,0 +1,213 @@
+/* ===== GLOBAL STYLES START ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+$font-family: 'Inter', sans-serif;
+$text-main: #19191B;
+$text-tertiary: #666;
+$primary-primary: #7386D5;
+$primary-primary-hover: #5B6FBE;
+$primary-primary-active: #465BB0;
+$text-primary: #F3F5FF;
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $font-family;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main_title{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 36px;
+    color: $text-main;
+}
+
+.body_regular{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $text-main;
+}
+
+.body_medium{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* ===== GLOBAL STYLES END ===== */
+
+/* ===== LOGIN START ===== */
+
+.login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2;
+}
+
+.login_content{
+    width: 27.3%;
+}
+.login_title{
+    text-align: center;
+}
+.login_form{
+    display: block;
+    margin-top: 32px;
+    width: 100%;
+    &.hide{
+        display: none;
+    }
+}
+.login_item{
+    display: block;
+    margin-bottom: 16px;
+}
+.login_input{
+    outline: none;
+    background-color: #fff;
+    margin-top: 4px;
+    position: relative;
+    width: 100%;
+    height: 48px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+    &::placeholder{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $text-tertiary;
+    }
+    .login_mail-img{
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        transform: translate(0%,-50%);
+    }
+    .login_mail-img-show{
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 13px;
+        transform: translate(0%,-50%);
+    }
+    .login_input-text{
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        box-shadow: none;
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        padding-right: 45px;
+        padding-left: 44px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        transition: .2s;
+        &:focus{
+            border: 2px solid #7386D5;
+        }
+    }
+}
+.login_remember{
+    user-select: none;
+    display: flex;
+    align-items: center;
+    .login_remember-checkbox-fake{
+        margin-right: 12px;
+        position: relative;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        border-radius: 6px;
+    }
+    .login_remember-checkbox-real{
+        width: 1;
+        height: 1;
+        position: absolute;
+        opacity: 0;
+        appearance: none;
+        &:checked + .login_remember-checkbox-fake{
+            background-color: $primary-primary;
+        }
+        &:checked + .login_remember-checkbox-fake::before{
+            content: '';
+            background-image: url(../imgs/logs/checkedicon.svg);
+            background-size: initial;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.login_btn{
+    margin-top: 48px;
+    width: 100%;
+    .login_btn-item{
+        cursor: pointer;
+        box-shadow: none;
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        width: 100%;
+        height: 48px;
+        background-color: $primary-primary;
+        color: $text-primary;
+        transition: .2s;
+        &:hover{
+            background-color: $primary-primary-hover;
+        }
+        &:active{
+            background-color: $primary-primary-active;
+        }
+    }
+}
+
+.login_forgot-password{
+    margin-top: 28px;
+    width: 100%;
+    text-align: center;
+    .login_forgot-password-item{
+        width: 100%;
+        color: $primary-primary;
+    }
+}
+
+.login_forgot-pasw-content{
+    display: block;
+    &.hide{
+        display: none;
+    }
+    margin-top: 20px;
+    .login_btn{
+        margin-top: 32px;
+    }
+}
+
+.login_forgot-pasw-suptext{
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* ===== LOGIN END ===== */
