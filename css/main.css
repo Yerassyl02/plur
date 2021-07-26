@@ -68,13 +68,10 @@ a {
   margin-top: 32px;
   width: 100%;
 }
-.login_form.hide {
-  display: none;
-}
 
 .login_item {
-  display: block;
   margin-bottom: 16px;
+  display: block;
 }
 
 .login_input {
@@ -188,7 +185,7 @@ a {
 }
 .login_remember .login_remember-checkbox-real:checked + .login_remember-checkbox-fake::before {
   content: "";
-  background-image: url(../imgs/logs/checkedicon.svg);
+  background-image: url(../imgs/icons/checkedicon.svg);
   background-size: initial;
   background-position: center;
   background-repeat: no-repeat;
@@ -239,9 +236,6 @@ a {
 .login_forgot-pasw-content {
   display: block;
   margin-top: 20px;
-}
-.login_forgot-pasw-content.hide {
-  display: none;
 }
 .login_forgot-pasw-content .login_btn {
   margin-top: 32px;
