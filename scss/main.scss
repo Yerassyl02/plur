@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
+$black: #000;
 $font-family: 'Inter', sans-serif;
 $text-main: #19191B;
 $text-tertiary: #666;
@@ -9,6 +10,7 @@ $primary-primary: #7386D5;
 $primary-primary-hover: #5B6FBE;
 $primary-primary-active: #465BB0;
 $text-primary: #F3F5FF;
+$error-bg: #FFD9D9;
 
 *,
 *::before,
@@ -41,10 +43,22 @@ a{
     color: $text-main;
 }
 
+.body_regular-small{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+}
+
 .body_medium{
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+}
+
+.title_semibold{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
 }
 
 /* ===== GLOBAL STYLES END ===== */
@@ -202,6 +216,26 @@ a{
 .login_forgot-pasw-suptext{
     text-align: center;
     margin-bottom: 32px;
+}
+
+.login_error-text{
+    margin-top: 32px;
+    margin-bottom: -8px;
+    background-color: $error-bg;
+    padding: 16px;
+    border: 1px solid rgba($black, .12);
+    border-radius: 8px;
+    .title_semibold{
+        color: $text-main;
+    }
+    .body_regular-small{
+        color: rgba($black, .68);
+    }
+}
+
+.login_title-subtitle{
+    margin-top: 20px;
+    margin-bottom: -16px;
 }
 
 /* ===== LOGIN END ===== */
