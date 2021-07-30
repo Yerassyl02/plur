@@ -5,8 +5,10 @@ const sidebarBurger = document.querySelector('.sidebar_burger');
 const sidebarBurgerOpen = document.querySelector('.sidebar_burger-open');
 const sidebarBurgerClose = document.querySelector('.sidebar_burger-close');
 const overlaybg = document.querySelector('.overlay');
-const sidebarMenuDropdown = document.querySelectorAll('.sidebar-menu-dropdown')
-const sidebarMenu = document.querySelectorAll('.sidebar-menu')
+const sidebarMenuDropdown = document.querySelectorAll('.sidebar-menu-dropdown');
+const sidebarMenu = document.querySelectorAll('.sidebar-menu');
+const header = document.querySelector('.header');
+const container = document.querySelectorAll('.container');
 // ** show-hide password input start;x
 
 if(togglePasswordBtn) {
@@ -31,7 +33,11 @@ if (sidebarBurger) {
             overlaybg.classList.remove('active');
             sidebarMenuDropdown.forEach( function (dropdown) {
                 dropdown.classList.remove('active')
+            });
+            container.forEach(function (item) {
+                item.style.maxWidth = '1471px'
             })
+            header.style.paddingLeft = '96px'
             burgerOpen = true;
         } else {
             sidebar.classList.remove('hide')
