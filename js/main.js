@@ -37,7 +37,7 @@ if (sidebarBurger) {
             container.forEach(function (item) {
                 item.style.maxWidth = '1471px'
             })
-            header.style.paddingLeft = '96px'
+            header.style.paddingLeft = '64px'
             burgerOpen = true;
         } else {
             sidebar.classList.remove('hide')

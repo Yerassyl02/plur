@@ -34,8 +34,8 @@ body{
 .container{
     max-width: 1280px;
     margin-left: auto;
-    // padding-left: 32px; +
-    padding-right: 40px;
+    padding-left: 32px; 
+    padding-right: 32px;
     transition: max-width .3s;
     // &-content{
     //     max-width: 1280px;
@@ -114,7 +114,7 @@ a{
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 24px 0 16px 288px;
+    padding: 24px 8px 16px 256px;
     background-color: $white;
     box-shadow: inset 0px -1px 0px rgba($black, 0.08);
     transition: .3s;
@@ -166,6 +166,53 @@ a{
 }
 
 /* ===== HEADER END ===== */
+
+/* ===== SEARCHBAR START ===== */
+
+.search_bars{
+    margin-top: 148px;
+}
+
+.search_bar-input{
+    position: relative;
+    width: 88.7%;
+    background-color: $white;
+    border-radius: 8px;
+    &-text{
+        width: 100%;
+        box-shadow: 0px 2px 6px rgba($black, 0.03);
+        padding: 12px 12px 12px 44px;
+        border: 1px solid rgba($black, 0.12);
+        border-radius: 8px;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        transition: .3s;
+        &::placeholder{
+            color: $text-tertiary;
+        }
+        &:focus{
+            border: 1px solid $primary-primary;
+            padding: 11px 12px 11px 44px;
+        }
+    }
+}
+
+.search_bar-btn{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translate(0, -50%);
+}
+
+/* ===== SEARCHBAR END ===== */
 
 /* ===== NAVBAR START ===== */
 
